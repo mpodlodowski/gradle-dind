@@ -1,6 +1,6 @@
 FROM anapsix/alpine-java:8_jdk
 MAINTAINER Marcin Podlodowski <marcin@podlodowski.it>
-ARG GRADLE_VERSION=4.2.1
+ARG GRADLE_VERSION=4.10.2
 
 ENV \
     BUILD_DEPS="gettext"  \
@@ -12,7 +12,7 @@ RUN \
     cp /usr/bin/envsubst /usr/local/bin/envsubst && \
     apk del build_deps
 
-RUN pip install 'docker-compose==1.16.1'
+RUN pip install 'docker-compose==1.22.0'
 
 WORKDIR /usr/bin
 
